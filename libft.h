@@ -6,7 +6,7 @@
 /*   By: eboulhou <eboulhou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:26:41 by eboulhou          #+#    #+#             */
-/*   Updated: 2022/10/12 13:06:41 by eboulhou         ###   ########.fr       */
+/*   Updated: 2022/10/14 17:39:24 by eboulhou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,7 @@ void ft_putstr_fd(char *s, int fd);
 void ft_putendl_fd(char *s, int fd);
 void ft_putnbr_fd(int n, int fd);
 
+
+//-------- to remove funcitions--------------
+char	*ft_strtrim_prov(char const *s1, char const *set);
 #endif

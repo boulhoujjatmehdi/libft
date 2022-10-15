@@ -6,13 +6,13 @@
 /*   By: eboulhou <eboulhou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 19:47:04 by eboulhou          #+#    #+#             */
-/*   Updated: 2022/10/11 16:46:48 by eboulhou         ###   ########.fr       */
+/*   Updated: 2022/10/15 11:38:15 by eboulhou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	nb_of_strings(const char *s, char c, int *location)
+int	nb_of_strings(const char *s, char c, int *l)
 {
 	int	i[3];
 	int	nb;
@@ -29,8 +29,8 @@ int	nb_of_strings(const char *s, char c, int *location)
 			i[1]++;
 		if (i[1])
 		{
-			location[i[2]++] = i[0];
-			location[i[2]++] = i[0] + i[1];
+			l[i[2]++] = i[0];
+			l[i[2]++] = i[0] + i[1];
 			nb++;
 		}
 		i[0] += i[1];
@@ -42,26 +42,25 @@ char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		nb;
-	int		*location;
+	int		*l;
 	char	**ret;
 
 	if (!s)
 		return (0);
-	location = (int *)malloc(sizeof(int) * (ft_strlen(s)));
-	if (!location)
+	l = (int *)malloc(sizeof(int) * (ft_strlen(s)));
+	if (!l)
 		return (0);
-	nb = nb_of_strings(s, c, location);
+	nb = nb_of_strings(s, c, l);
 	ret = (char **)ft_calloc (nb + 1, sizeof(char *));
-	if (!ret || !location)
+	if (!ret)
 		return (0);
 	i = 0;
-	location[nb * 2 + 1] = location[i + 1] - location[i];
 	while (i < nb * 2)
 	{
-		ret[i / 2] = (char *)ft_calloc((location[nb * 2 + 1] + 1), sizeof(char));
+		ret[i / 2] = (char *)ft_calloc((l[i + 1] - l[i] + 1), sizeof(char));
 		if (!ret[i / 2])
 			return (NULL);
-		ft_memcpy (ret[i / 2], s + location[i], location[i + 1] - location[i]);
+		ft_memcpy (ret[i / 2], s + l[i], l[i + 1] - l[i]);
 		i += 2;
 	}
 	return (ret);
