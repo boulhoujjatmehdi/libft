@@ -6,7 +6,7 @@
 /*   By: eboulhou <eboulhou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 21:19:26 by eboulhou          #+#    #+#             */
-/*   Updated: 2022/10/07 17:46:44 by eboulhou         ###   ########.fr       */
+/*   Updated: 2022/10/15 15:56:20 by eboulhou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dest, const void *src, unsigned int n)
 {
-	unsigned char	*n_dest;
-	unsigned char	*n_src;
+	char	*n_dest;
+	char	*n_src;
 
 	if ((!dest && !src) || !n)
 		return (dest);
@@ -23,8 +23,8 @@ void	*ft_memmove(void *dest, const void *src, unsigned int n)
 		ft_memcpy (dest, src, n);
 	else
 	{
-		n_dest = (unsigned char *)dest;
-		n_src = (unsigned char *)src;
+		n_dest = (char *)dest;
+		n_src = (char *)src;
 		while (n--)
 			n_dest[n] = n_src[n];
 	}
