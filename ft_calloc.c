@@ -6,7 +6,7 @@
 /*   By: eboulhou <eboulhou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 15:18:05 by eboulhou          #+#    #+#             */
-/*   Updated: 2022/10/06 16:54:31 by eboulhou         ###   ########.fr       */
+/*   Updated: 2022/10/17 17:39:18 by eboulhou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
+	void	*ret;
+
 	count *= size;
-	void *ret = malloc(count);
+	ret = malloc(count);
 	if (!ret)
-		return 0;
-	ft_bzero(ret , count);
-	return ret;
+		return (0);
+	ft_bzero (ret, count);
+	return (ret);
 }

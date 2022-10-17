@@ -5,24 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eboulhou <eboulhou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 16:04:43 by eboulhou          #+#    #+#             */
-/*   Updated: 2022/10/11 18:48:37 by eboulhou         ###   ########.fr       */
+/*   Created: 2022/10/17 17:28:41 by eboulhou          #+#    #+#             */
+/*   Updated: 2022/10/17 17:29:52 by eboulhou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    int i;
-    i = 0;
+	int	i;
 
-    if(s){
-        while(s[i])
-        {
-            f(i , &s[i]);
-            i++;
-        }
-    }
+	i = 0;
+	if (s)
+	{
+		while (s[i])
+		{
+			f(i, &s[i]);
+			i++;
+		}
+	}
 }
-    

@@ -6,19 +6,20 @@
 /*   By: eboulhou <eboulhou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:39:27 by eboulhou          #+#    #+#             */
-/*   Updated: 2022/10/05 13:33:24 by eboulhou         ###   ########.fr       */
+/*   Updated: 2022/10/17 17:40:14 by eboulhou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s , size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    int i = 0;
-    while(i < (int)n)
-    {
-        ((char *)s)[i] = 0;
-        i++;
-    }
-}
+	int	i;
 
+	i = 0;
+	while (i < (int)n)
+	{
+		((char *)s)[i] = 0;
+		i++;
+	}
+}
