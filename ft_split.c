@@ -6,7 +6,7 @@
 /*   By: eboulhou <eboulhou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 19:47:04 by eboulhou          #+#    #+#             */
-/*   Updated: 2022/10/15 11:38:15 by eboulhou         ###   ########.fr       */
+/*   Updated: 2022/10/18 16:06:03 by eboulhou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,6 @@ char	**ft_split(char const *s, char c)
 		ft_memcpy (ret[i / 2], s + l[i], l[i + 1] - l[i]);
 		i += 2;
 	}
+	free(l);
 	return (ret);
 }

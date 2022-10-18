@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eboulhou <eboulhou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/15 18:40:24 by eboulhou          #+#    #+#             */
-/*   Updated: 2022/10/18 13:13:05 by eboulhou         ###   ########.fr       */
+/*   Created: 2022/10/18 18:18:17 by eboulhou          #+#    #+#             */
+/*   Updated: 2022/10/18 19:50:35 by eboulhou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list *ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
 {
-	t_list	*newTlist;
-
-	newTlist = (t_list *)malloc(sizeof(t_list));
-	if (!newTlist)
-		return (0);
-	newTlist->content = content;
-	newTlist->next = NULL;
-	return (newTlist);
+    while(lst)
+    {
+        
+    }
 }
