@@ -6,7 +6,7 @@
 /*   By: eboulhou <eboulhou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 18:40:24 by eboulhou          #+#    #+#             */
-/*   Updated: 2022/10/18 13:13:05 by eboulhou         ###   ########.fr       */
+/*   Updated: 2022/10/19 19:15:37 by eboulhou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*newTlist;
+	t_list	*new_t_list;
 
-	newTlist = (t_list *)malloc(sizeof(t_list));
-	if (!newTlist)
+	new_t_list = (t_list *)malloc(sizeof(t_list));
+	if (!new_t_list)
 		return (0);
-	newTlist->content = content;
-	newTlist->next = NULL;
-	return (newTlist);
+	new_t_list->content = content;
+	new_t_list->next = NULL;
+	return (new_t_list);
 }

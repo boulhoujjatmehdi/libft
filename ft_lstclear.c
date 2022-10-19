@@ -6,7 +6,7 @@
 /*   By: eboulhou <eboulhou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 17:21:02 by eboulhou          #+#    #+#             */
-/*   Updated: 2022/10/18 18:05:22 by eboulhou         ###   ########.fr       */
+/*   Updated: 2022/10/19 17:23:46 by eboulhou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 
 	if (!lst || !del)
 		return ;
-	temp = *lst;
+	t2 = *lst;
+	temp = t2;
 	while (temp)
 	{
-		t2 = temp;
-		temp = temp->next;
+		temp = t2->next;
 		ft_lstdelone(t2, del);
+		t2 = temp;
 	}
 	*lst = NULL;
 }
