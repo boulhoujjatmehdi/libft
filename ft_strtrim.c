@@ -6,13 +6,13 @@
 /*   By: eboulhou <eboulhou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 18:48:23 by eboulhou          #+#    #+#             */
-/*   Updated: 2022/10/14 18:39:54 by eboulhou         ###   ########.fr       */
+/*   Updated: 2022/10/20 16:22:06 by eboulhou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	found_char(const char *set, char c)
+static int	found_char(const char *set, char c)
 {
 	while (*set)
 	{

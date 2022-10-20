@@ -6,7 +6,7 @@
 /*   By: eboulhou <eboulhou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 16:40:20 by eboulhou          #+#    #+#             */
-/*   Updated: 2022/10/12 18:37:57 by eboulhou         ###   ########.fr       */
+/*   Updated: 2022/10/20 17:23:34 by eboulhou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_atoi(const char *str)
 			neg = -1;
 	if (!ft_isdigit(str[i]))
 		return (0);
-	while (ft_isdigit(str[i]) && str[i] >= '0' && str[i] <= '9')
+	while (ft_isdigit(str[i]))
 	{
 		ret = ret * 10 + str[i] - 48;
 		if (ret > 2147483647 && neg == 1)

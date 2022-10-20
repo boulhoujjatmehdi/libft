@@ -6,13 +6,13 @@
 /*   By: eboulhou <eboulhou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 17:46:42 by eboulhou          #+#    #+#             */
-/*   Updated: 2022/10/17 17:35:14 by eboulhou         ###   ########.fr       */
+/*   Updated: 2022/10/20 16:23:15 by eboulhou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_pos(int n)
+static int	is_pos(int n)
 {
 	int	pos;
 
@@ -22,7 +22,7 @@ int	is_pos(int n)
 	return (pos);
 }
 
-int	len_of_int(long n, int pos)
+static int	len_of_int(long n, int pos)
 {
 	int	i;
 	int	spare;

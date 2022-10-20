@@ -6,13 +6,13 @@
 /*   By: eboulhou <eboulhou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 19:47:04 by eboulhou          #+#    #+#             */
-/*   Updated: 2022/10/19 18:40:19 by eboulhou         ###   ########.fr       */
+/*   Updated: 2022/10/20 16:22:31 by eboulhou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	nb_of_strings(const char *s, char c, int *l)
+static int	nb_of_strings(const char *s, char c, int *l)
 {
 	int	i[3];
 	int	nb;
